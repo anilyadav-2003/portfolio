@@ -1,0 +1,396 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #121212;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url('images/anil02.jpg') no-repeat center center/cover;
+    position: relative;
+    padding: 2rem 1rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.7); /* stronger overlay */
+    z-index: 1;
+}
+
+.hero-text h1 {
+    position: relative;
+    z-index: 2;
+    color: #d39f27;
+    font-size: 3.2rem;
+    font-weight: 800;
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.2),
+                 0 0 30px rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #1f1f1f, #0f0f0f);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4) inset;
+    color: #00ffff;
+}
+
+
+
+.hero-buttons {
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    .hero {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+}
+
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    background-color: #1f1f1f;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about h2 span {
+    color: orange;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid orange;
+}
+
+.about-content div {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-content h3 span {
+    color: orange;
+}
+
+.about-icons {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.icon-card {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    will-change: transform;
+}
+
+.icon-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+    color: #00ffe1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+    color: #aaa;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
+        height: auto;
+    }
+}
+/*resume section */
+.resume-section {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding: 80px 20px;
+    color: rgb(216, 206, 206);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.resume-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.resume-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.resume-card:hover {
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4) inset;
+    transform: scale(1.05);
+}
+
+.resume-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #00ffff;
+}
+
+.resume-card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #1f1f1f, #0f0f0f);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Project Section */
+.project-section {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding: 80px 20px;
+    color: rgb(216, 206, 206);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4) inset;
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    color: #00ffff;
+    margin: 15px 0 5px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #1f1f1f, #0f0f0f);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 30px cyan;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+

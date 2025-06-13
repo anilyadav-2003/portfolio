@@ -1,11 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .typed-text {
+            display: inline;
+            border-right: 2px solid orange;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: orange;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Anil Yadav</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1 data-aos="fade-up" data-aos-delay="0">I Am</h1>
+            <h1 data-aos="fade-up" data-aos-delay="100">
+                <span class="typed-text" id="typed"></span>
+            </h1>
+            <div class="hero-buttons">
+                <a href="Anil_Yadav_Resume.pdf" class="download-btn" download>
+                    📄 Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 data-aos="fade-up">About <span>MySelf</span></h2>
+        <div class="about-content">
+            <img src="images/anilp.jpg" alt="Profile Photo" data-aos="fade-right">
+            <div data-aos="fade-left">
+                <h3>Hello, I Am <span>Anil Yadav</span></h3>
+                <p>As a fresher passionate about technology, I enjoy exploring programming, working on hands-on
+                    projects, and continuously learning new skills to become a better developer.</p>
+                <p>Name: Anil Yadav </p>
+
+                <!-- Updated Icon Buttons -->
+                <div class="about-icons">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=me.anilyadav2003@gmail.com" target="_blank"
+                        class="icon-card" title="Email">📧</a>
+                    <a href="tel:123456789" target="_blank" title="Call" class="icon-card">📞</a>
+                    <a href="https://github.com/anilyadav-2003" target="_blank" title="GitHub" class="icon-card">💻</a>
+                    <a href="https://www.linkedin.com/in/anil-yadav-7338477187/" target="_blank" title="LinkedIn"
+                        class="icon-card">🔗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <h2 data-aos="fade-up" style="margin-bottom: 10px;">Resume</h2>
+
+        <!-- Download Button Below Resume Text -->
+        <div data-aos="fade-up" data-aos-delay="50" style="text-align: center; margin-bottom: 30px;">
+            <a href="Anil_Yadav_Resume.pdf" download class="resume-btn">📄 Download Resume</a>
+        </div>
+
+        <div class="resume-cards">
+            <div class="resume-card" data-tilt data-aos="fade-up">
+                <h3>B.Tech in Computer Science</h3>
+                <p>VTU University, 2022 - 2026</p>
+            </div>
+            <div class="resume-card" data-tilt data-aos="fade-up" data-aos-delay="100">
+                <h3>10 +2</h3>
+                <p>United Academy, 2020 - 2021</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Portfolio Section -->
+    <section id="Project" class="project-section">
+        <h2 data-aos="fade-up">Projects</h2>
+
+        <div class="project-cards">
+            <div class="project-card" data-tilt data-aos="fade-up">
+                <h3>Project One </h3>
+                <p>Responsive Medical shop website using html, Css and Javascript</p>
+                <a href="https://github.com/anilyadav-2003" class="project-btn">🔗 View on Github</a>
+            </div>
+            <div class="project-card" data-tilt data-aos="fade-up" data-aos-delay="100">
+                <h3>Project Two</h3>
+                <p>Face, Eye and Smile detection using Opencv</p>
+                <a href="https://github.com/anilyadav-2003" class="project-btn">🔗 View on Github</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Anil Yadav. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
 </body>
+
 </html>
