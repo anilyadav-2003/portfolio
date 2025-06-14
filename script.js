@@ -104,3 +104,7 @@ document.querySelectorAll('nav a').forEach(link => {
     duration: 800,
     once: true
   });
+
+
+
+  
