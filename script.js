@@ -98,3 +98,9 @@ document.querySelectorAll('nav a').forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+
+//for gallery images
+  AOS.init({
+    duration: 800,
+    once: true
+  });
