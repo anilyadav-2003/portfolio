@@ -204,18 +204,24 @@
 
             <!-- Right Panel -->
             <div class="contact-form" data-aos="fade-left">
-                <form id="contactForm">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="c7feaebf-bef8-4e9d-b57e-77957bb209d2" />
+
                     <div class="form-row">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
                     </div>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+
+                    <input type="text" name="subject" placeholder="Subject" required />
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
                     <button type="submit" class="glow-btn" id="submitBtn">
                         <span class="rocket-icon">🚀</span> Send Message
                     </button>
                 </form>
             </div>
+
+
         </div>
     </section>
 
@@ -228,5 +234,4 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 </body>
-
 </html>
